@@ -1,6 +1,6 @@
 {
   "name": "cli-columns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Columnated lists for the CLI.",
   "main": "src/cli-columns.js",
   "scripts": {
