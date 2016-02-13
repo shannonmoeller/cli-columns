@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shannonmoeller/colonel"
+    "url": "https://github.com/shannonmoeller/cli-columns"
   },
   "keywords": [
     "ansi",
@@ -29,9 +29,9 @@
   "author": "Shannon Moeller <me@shannonmoeller> (http://shannonmoeller.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shannonmoeller/colonel/issues"
+    "url": "https://github.com/shannonmoeller/cli-columns/issues"
   },
-  "homepage": "https://github.com/shannonmoeller/colonel",
+  "homepage": "https://github.com/shannonmoeller/cli-columns",
   "dependencies": {
     "object-assign": "^4.0.1",
     "string-width": "^1.0.1"
