@@ -45,6 +45,8 @@ test('should print complex list', async assert => {
 		}
 	);
 
+	console.log(cols);
+
 	var expected =
 		'apple             bar               durian            star fruit        \n' +
 		'apricot           baz               foo               嶜憃撊 噾噿嚁     \n' +
