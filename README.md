@@ -25,7 +25,7 @@ var values = [
 console.log(columns(values));
 ```
 
-<img width="417" alt="screenshot 2016-02-13 21 39 01" src="https://cloud.githubusercontent.com/assets/155164/13031366/51659082-d29a-11e5-9ea4-c760717ddaa7.png">
+<img width="600" alt="screenshot 2016-02-13 21 39 01" src="https://cloud.githubusercontent.com/assets/155164/13031366/51659082-d29a-11e5-9ea4-c760717ddaa7.png" />
 
 ## API
 
@@ -38,7 +38,7 @@ console.log(columns(values));
   - `padding` `{Number}` (default: `2`) Space between columns.
   - `width` `{Number}` (default: `process.stdout.columns`) Max width of list.
 
-Sorts and formats a list of values into columns suitable to a given width.
+Sorts and formats a list of values into columns suitable to display in a given width.
 
 ## Contribute
 
