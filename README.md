@@ -50,7 +50,7 @@ Standards for this project, including tests, code coverage, and semantics are en
 
 ----
 
-© 2016 Shannon Moeller <me@shannonmoeller.com>
+© Shannon Moeller <me@shannonmoeller.com> (shannonmoeller.com)
 
 Licensed under [MIT](http://shannonmoeller.com/mit.txt)
 
