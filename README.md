@@ -15,17 +15,18 @@ var chalk = require('chalk');
 var columns = require('cli-columns');
 
 var values = [
-    'foo', 'bar', 'baz', 'pear',
+    'foo', 'bar', 'baz',
+    chalk.cyan('嶜憃撊') + ' 噾噿嚁',
     'blue' + chalk.bgBlue('berry'),
     chalk.red('apple'), 'pomegranate',
     'durian', chalk.green('star fruit'),
-    'apricot', 'banana pinapple'
+    'apricot', 'banana pineapple'
 ];
 
 console.log(columns(values));
 ```
 
-<img width="600" alt="screenshot 2016-02-13 21 39 01" src="https://cloud.githubusercontent.com/assets/155164/13031366/51659082-d29a-11e5-9ea4-c760717ddaa7.png" />
+<img width="600" alt="screenshot" src="https://cloud.githubusercontent.com/assets/155164/13035272/ad76774a-d319-11e5-8e97-8d1f0722a771.png" />
 
 ## API
 

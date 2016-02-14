@@ -5,10 +5,8 @@ import test from 'ava';
 
 test('should print one column list', async assert => {
 	var cols = columns(['foo', ['bar', 'baz'], ['bat', 'qux']], {
-		width: 2
+		width: 1
 	});
-
-	console.log(cols);
 
 	var expected =
 		'bar\n' +
@@ -25,8 +23,6 @@ test('should print three column list', async assert => {
 		width: 16
 	});
 
-	console.log(cols);
-
 	var expected =
 		'bar  baz  qux  \n' +
 		'bat  foo  ';
@@ -37,23 +33,22 @@ test('should print three column list', async assert => {
 test('should print complex list', async assert => {
 	var cols = columns(
 		[
-			'foo', 'bar', 'baz', 'pear',
+			'foo', 'bar', 'baz',
+			chalk.cyan('嶜憃撊') + ' 噾噿嚁',
 			'blue' + chalk.bgBlue('berry'),
 			chalk.red('apple'), 'pomegranate',
 			'durian', chalk.green('star fruit'),
-			'apricot', 'banana pinapple'
+			'apricot', 'banana pineapple'
 		],
 		{
 			width: 80
 		}
 	);
 
-	console.log(cols);
-
 	var expected =
-		'apple            bar              durian           pomegranate      \n' +
-		'apricot          baz              foo              star fruit       \n' +
-		'banana pinapple  blueberry        pear             ';
+		'apple             bar               durian            star fruit        \n' +
+		'apricot           baz               foo               嶜憃撊 噾噿嚁     \n' +
+		'banana pineapple  blueberry         pomegranate       ';
 
 	assert.is(stripAnsi(cols), expected);
 });
