@@ -45,7 +45,8 @@ test('should print complex list', async assert => {
 		}
 	);
 
-	console.log(cols);
+	// Visual test
+	console.log(chalk.yellow(cols) + '\n');
 
 	var expected =
 		'apple             bar               durian            star fruit        \n' +
