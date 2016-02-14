@@ -37,10 +37,11 @@ test('should print three column list', async assert => {
 test('should print complex list', async assert => {
 	var cols = columns(
 		[
-			'foo', 'bar', 'baz', chalk.blue('berry'),
+			'foo', 'bar', 'baz', 'pear',
+			'blue' + chalk.bgBlue('berry'),
 			chalk.red('apple'), 'pomegranate',
 			'durian', chalk.green('star fruit'),
-			'apricot', 'pear', 'banana pinapple'
+			'apricot', 'banana pinapple'
 		],
 		{
 			width: 80
@@ -52,7 +53,7 @@ test('should print complex list', async assert => {
 	var expected =
 		'apple            bar              durian           pomegranate      \n' +
 		'apricot          baz              foo              star fruit       \n' +
-		'banana pinapple  berry            pear             ';
+		'banana pinapple  blueberry        pear             ';
 
 	assert.is(stripAnsi(cols), expected);
 });

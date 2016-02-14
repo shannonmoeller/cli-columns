@@ -2,7 +2,7 @@
 
 [![NPM version][npm-img]][npm-url] [![Downloads][downloads-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Chat][gitter-img]][gitter-url] [![Tip][amazon-img]][amazon-url]
 
-Columnated lists for the CLI.
+Columnated lists for the CLI. Unicode and ANSI safe.
 
 ## Install
 
@@ -11,13 +11,34 @@ Columnated lists for the CLI.
 ## Usage
 
 ```js
+var chalk = require('chalk');
 var columns = require('cli-columns');
-var formatted = columns(['foo', 'bar']);
+
+var values = [
+    'foo', 'bar', 'baz', 'pear',
+    'blue' + chalk.bgBlue('berry'),
+    chalk.red('apple'), 'pomegranate',
+    'durian', chalk.green('star fruit'),
+    'apricot', 'banana pinapple'
+];
+
+console.log(columns(values));
 ```
+
+<img width="417" alt="screenshot 2016-02-13 21 39 01" src="https://cloud.githubusercontent.com/assets/155164/13031366/51659082-d29a-11e5-9ea4-c760717ddaa7.png">
 
 ## API
 
 ### columns(values [, options]): String
+
+- `values` `{Array<String>}` Array of strings to display.
+- `options` `{Object}`
+  - `character` `{String}` (default: `' '`) Padding character.
+  - `newline` `{String}` (default: `'\n'`) Newline character.
+  - `padding` `{Number}` (default: `2`) Space between columns.
+  - `width` `{Number}` (default: `process.stdout.columns`) Max width of list.
+
+Sorts and formats a list of values into columns suitable to a given width.
 
 ## Contribute
 
