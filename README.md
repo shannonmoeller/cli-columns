@@ -26,7 +26,7 @@ var values = [
 console.log(columns(values));
 ```
 
-<img width="600" alt="screenshot" src="https://cloud.githubusercontent.com/assets/155164/13035272/ad76774a-d319-11e5-8e97-8d1f0722a771.png" />
+<img width="600" alt="screenshot" src="https://cloud.githubusercontent.com/assets/155164/13035288/256c6afc-d31a-11e5-9071-57a5fc753a79.png" />
 
 ## API
 
