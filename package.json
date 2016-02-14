@@ -34,7 +34,8 @@
   "homepage": "https://github.com/shannonmoeller/cli-columns",
   "dependencies": {
     "object-assign": "^4.0.1",
-    "string-width": "^1.0.1"
+    "string-width": "^1.0.1",
+    "strip-ansi": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^0.11.0",
