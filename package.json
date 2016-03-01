@@ -5,9 +5,8 @@
   "main": "src/cli-columns.js",
   "scripts": {
     "coveralls": "nyc report -r text-lcov | coveralls",
-    "pretest": "xo src/*.js test/*.js",
-    "test": "nyc ava -v test/*.js",
-    "watch": "watch 'npm test' src test -du"
+    "test": "xo && nyc ava -v",
+    "watch": "chokidar '{src,test}/*.js' -c 'npm test'"
   },
   "repository": {
     "type": "git",
@@ -42,10 +41,10 @@
   "devDependencies": {
     "ava": "^0.11.0",
     "chalk": "^1.1.1",
+    "chokidar-cli": "^1.2.0",
     "coveralls": "^2.11.6",
     "nyc": "^5.6.0",
     "strip-ansi": "^3.0.0",
-    "watch": "^0.17.1",
     "xo": "^0.12.1"
   }
 }
