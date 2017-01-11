@@ -38,6 +38,7 @@ console.log(columns(values));
   - `newline` `{String}` (default: `'\n'`) Newline character.
   - `padding` `{Number}` (default: `2`) Space between columns.
   - `width` `{Number}` (default: `process.stdout.columns`) Max width of list.
+  - `noSort` `{Boolean}` (default: `false`) No use sorting.
 
 Sorts and formats a list of values into columns suitable to display in a given width.
 
