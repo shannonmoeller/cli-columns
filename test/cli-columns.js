@@ -56,7 +56,7 @@ test('should print complex list', async assert => {
 	assert.is(stripAnsi(cols), expected);
 });
 
-test('should no sort with noSort option', async assert => {
+test('should optionally not sort', async assert => {
 	var cols = columns(
 		[
 			'foo', 'bar', 'baz',
@@ -67,8 +67,8 @@ test('should no sort with noSort option', async assert => {
 			'apricot', 'banana pineapple'
 		],
 		{
-			width: 80,
-			noSort: true
+			sort: false,
+			width: 80
 		}
 	);
 

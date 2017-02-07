@@ -7,8 +7,8 @@ var defaults = {
 	character: ' ',
 	newline: '\n',
 	padding: 2,
-	width: 0,
-	noSort: false
+	sort: true,
+	width: 0
 };
 
 function byPlainText(a, b) {
@@ -47,7 +47,8 @@ function columns(values, options) {
 	var cells = values
 		.filter(Boolean)
 		.map(String);
-	if (!options.noSort) {
+
+	if (options.sort !== false) {
 		cells = cells.sort(byPlainText);
 	}
 
