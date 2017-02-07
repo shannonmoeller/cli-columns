@@ -1,8 +1,8 @@
 var assign = require('object-assign');
 var stringWidth = require('string-width');
 var stripAnsi = require('strip-ansi');
-var concat = Array.prototype.concat;
 
+var concat = Array.prototype.concat;
 var defaults = {
 	character: ' ',
 	newline: '\n',
