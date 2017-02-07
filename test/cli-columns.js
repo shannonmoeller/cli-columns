@@ -4,13 +4,13 @@ import stripAnsi from 'strip-ansi';
 import columns from '../src/cli-columns';
 
 test('should print one column list', async t => {
-	var cols = columns(['foo', ['bar', 'baz'], ['bat', 'qux']], {
+	var cols = columns(['foo', ['bar', 'baz'], ['bar', 'qux']], {
 		width: 1
 	});
 
 	var expected =
 		'bar\n' +
-		'bat\n' +
+		'bar\n' +
 		'baz\n' +
 		'foo\n' +
 		'qux';

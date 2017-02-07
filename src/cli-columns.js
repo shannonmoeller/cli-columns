@@ -1,9 +1,9 @@
-var assign = require('object-assign');
-var stringWidth = require('string-width');
-var stripAnsi = require('strip-ansi');
+const assign = require('object-assign');
+const stringWidth = require('string-width');
+const stripAnsi = require('strip-ansi');
 
-var concat = Array.prototype.concat;
-var defaults = {
+const concat = Array.prototype.concat;
+const defaults = {
 	character: ' ',
 	newline: '\n',
 	padding: 2,
@@ -12,7 +12,18 @@ var defaults = {
 };
 
 function byPlainText(a, b) {
-	return stripAnsi(a) > stripAnsi(b) ? 1 : -1;
+	const plainA = stripAnsi(a);
+	const plainB = stripAnsi(b);
+
+	if (plainA === plainB) {
+		return 0;
+	}
+
+	if (plainA > plainB) {
+		return 1;
+	}
+
+	return -1;
 }
 
 function makeArray() {
@@ -24,8 +35,8 @@ function makeList(count) {
 }
 
 function padCell(fullWidth, character, value) {
-	var valueWidth = stringWidth(value);
-	var filler = makeList(fullWidth - valueWidth + 1);
+	const valueWidth = stringWidth(value);
+	const filler = makeList(fullWidth - valueWidth + 1);
 
 	return value + filler.join(character);
 }
@@ -44,7 +55,7 @@ function columns(values, options) {
 	values = concat.apply([], values);
 	options = assign({}, defaults, options);
 
-	var cells = values
+	let cells = values
 		.filter(Boolean)
 		.map(String);
 
@@ -52,10 +63,10 @@ function columns(values, options) {
 		cells = cells.sort(byPlainText);
 	}
 
-	var termWidth = options.width || process.stdout.columns;
-	var cellWidth = Math.max.apply(null, cells.map(stringWidth)) + options.padding;
-	var columnCount = Math.floor(termWidth / cellWidth) || 1;
-	var rowCount = Math.ceil(cells.length / columnCount) || 1;
+	const termWidth = options.width || process.stdout.columns;
+	const cellWidth = Math.max.apply(null, cells.map(stringWidth)) + options.padding;
+	const columnCount = Math.floor(termWidth / cellWidth) || 1;
+	const rowCount = Math.ceil(cells.length / columnCount) || 1;
 
 	if (columnCount === 1) {
 		return cells.join(options.newline);
