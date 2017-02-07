@@ -55,3 +55,30 @@ test('should print complex list', async assert => {
 
 	assert.is(stripAnsi(cols), expected);
 });
+
+test('should no sort with noSort option', async assert => {
+	var cols = columns(
+		[
+			'foo', 'bar', 'baz',
+			chalk.cyan('嶜憃撊') + ' 噾噿嚁',
+			'blue' + chalk.bgBlue('berry'),
+			chalk.red('apple'), 'pomegranate',
+			'durian', chalk.green('star fruit'),
+			'apricot', 'banana pineapple'
+		],
+		{
+			width: 80,
+			noSort: true
+		}
+	);
+
+	// Visual test
+	console.log(chalk.yellow(cols) + '\n');
+
+	var expected =
+		'foo               嶜憃撊 噾噿嚁     pomegranate       apricot           \n' +
+		'bar               blueberry         durian            banana pineapple  \n' +
+		'baz               apple             star fruit        ';
+
+	assert.is(stripAnsi(cols), expected);
+});

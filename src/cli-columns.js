@@ -7,7 +7,8 @@ var defaults = {
 	character: ' ',
 	newline: '\n',
 	padding: 2,
-	width: 0
+	width: 0,
+	noSort: false
 };
 
 function byPlainText(a, b) {
@@ -45,8 +46,10 @@ function columns(values, options) {
 
 	var cells = values
 		.filter(Boolean)
-		.map(String)
-		.sort(byPlainText);
+		.map(String);
+	if (!options.noSort) {
+		cells = cells.sort(byPlainText);
+	}
 
 	var termWidth = options.width || process.stdout.columns;
 	var cellWidth = Math.max.apply(null, cells.map(stringWidth)) + options.padding;
