@@ -1,3 +1,5 @@
+'use strict';
+
 const assign = require('object-assign');
 const stringWidth = require('string-width');
 const stripAnsi = require('strip-ansi');
