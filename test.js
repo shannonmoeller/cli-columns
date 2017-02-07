@@ -1,7 +1,7 @@
 import test from 'ava';
 import chalk from 'chalk';
 import stripAnsi from 'strip-ansi';
-import columns from '../src/cli-columns';
+import columns from './index';
 
 test('should print one column list', async t => {
 	var cols = columns(['foo', ['bar', 'baz'], ['bar', 'qux']], {
