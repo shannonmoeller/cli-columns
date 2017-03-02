@@ -1,6 +1,5 @@
 'use strict';
 
-const assign = require('object-assign');
 const stringWidth = require('string-width');
 const stripAnsi = require('strip-ansi');
 
@@ -55,7 +54,7 @@ function toString(arr) {
 
 function columns(values, options) {
 	values = concat.apply([], values);
-	options = assign({}, defaults, options);
+	options = Object.assign({}, defaults, options);
 
 	let cells = values
 		.filter(Boolean)
