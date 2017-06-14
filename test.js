@@ -3,12 +3,12 @@ import chalk from 'chalk';
 import stripAnsi from 'strip-ansi';
 import columns from './index';
 
-test('should print one column list', async t => {
-	var cols = columns(['foo', ['bar', 'baz'], ['bar', 'qux']], {
+test('should print one column list', t => {
+	const cols = columns(['foo', ['bar', 'baz'], ['bar', 'qux']], {
 		width: 1
 	});
 
-	var expected =
+	const expected =
 		'bar\n' +
 		'bar\n' +
 		'baz\n' +
@@ -18,20 +18,20 @@ test('should print one column list', async t => {
 	t.is(cols, expected);
 });
 
-test('should print three column list', async t => {
-	var cols = columns(['foo', ['bar', 'baz'], ['bat', 'qux']], {
+test('should print three column list', t => {
+	const cols = columns(['foo', ['bar', 'baz'], ['bat', 'qux']], {
 		width: 16
 	});
 
-	var expected =
+	const expected =
 		'bar  baz  qux  \n' +
 		'bat  foo  ';
 
 	t.is(cols, expected);
 });
 
-test('should print complex list', async t => {
-	var cols = columns(
+test('should print complex list', t => {
+	const cols = columns(
 		[
 			'foo', 'bar', 'baz',
 			chalk.cyan('嶜憃撊') + ' 噾噿嚁',
@@ -45,7 +45,7 @@ test('should print complex list', async t => {
 		}
 	);
 
-	var expected =
+	const expected =
 		'apple             bar               durian            star fruit        \n' +
 		'apricot           baz               foo               嶜憃撊 噾噿嚁     \n' +
 		'banana pineapple  blueberry         pomegranate       ';
@@ -53,8 +53,8 @@ test('should print complex list', async t => {
 	t.is(stripAnsi(cols), expected);
 });
 
-test('should optionally not sort', async t => {
-	var cols = columns(
+test('should optionally not sort', t => {
+	const cols = columns(
 		[
 			'foo', 'bar', 'baz',
 			chalk.cyan('嶜憃撊') + ' 噾噿嚁',
@@ -69,7 +69,7 @@ test('should optionally not sort', async t => {
 		}
 	);
 
-	var expected =
+	const expected =
 		'foo               嶜憃撊 噾噿嚁     pomegranate       apricot           \n' +
 		'bar               blueberry         durian            banana pineapple  \n' +
 		'baz               apple             star fruit        ';
