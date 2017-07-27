@@ -11,16 +11,16 @@ Columnated lists for the CLI. Unicode and ANSI safe.
 ## Usage
 
 ```js
-var chalk = require('chalk');
-var columns = require('cli-columns');
+const chalk = require('chalk');
+const columns = require('.');
 
-var values = [
-    'foo', 'bar', 'baz',
-    chalk.cyan('嶜憃撊') + ' 噾噿嚁',
+const values = [
     'blue' + chalk.bgBlue('berry'),
+    '笔菠萝' + chalk.yellow('苹果笔'),
     chalk.red('apple'), 'pomegranate',
     'durian', chalk.green('star fruit'),
-    'apricot', 'banana pineapple'
+    'パイナップル', 'apricot', 'banana',
+    'pineapple', chalk.bgRed.yellow('orange'),
 ];
 
 console.log(columns(values));
