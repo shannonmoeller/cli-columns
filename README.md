@@ -20,13 +20,13 @@ const values = [
     chalk.red('apple'), 'pomegranate',
     'durian', chalk.green('star fruit'),
     'パイナップル', 'apricot', 'banana',
-    'pineapple', chalk.bgRed.yellow('orange'),
+    'pineapple', chalk.bgRed.yellow('orange')
 ];
 
 console.log(columns(values));
 ```
 
-<img width="600" alt="screenshot" src="https://cloud.githubusercontent.com/assets/155164/13035288/256c6afc-d31a-11e5-9071-57a5fc753a79.png" />
+<img alt="screenshot" src="https://user-images.githubusercontent.com/155164/28672800-bd415c86-72ae-11e7-855c-6f6aa108921b.png">
 
 ## API
 
