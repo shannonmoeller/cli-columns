@@ -7,7 +7,9 @@ const values = [
 	chalk.red('apple'), 'pomegranate',
 	'durian', chalk.green('star fruit'),
 	'パイナップル', 'apricot', 'banana',
-	'pineapple', chalk.bgRed.yellow('orange'),
+	'pineapple', chalk.bgRed.yellow('orange')
 ];
 
+console.log('');
 console.log(columns(values));
+console.log('');
