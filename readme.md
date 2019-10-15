@@ -11,8 +11,8 @@ Columnated lists for the CLI. Unicode and ANSI safe.
 ## Usage
 
 ```js
+const columns = require('cli-columns');
 const chalk = require('chalk');
-const columns = require('.');
 
 const values = [
     'blue' + chalk.bgBlue('berry'),
