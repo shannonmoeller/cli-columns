@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "description": "Columnated lists for the CLI.",
   "scripts": {
-    "lint": "npx eslint --fix '*.js' && npx prettier --write '*.js'",
+    "lint": "npx eslint --fix \"*.js\" && npx prettier --write \"*.js\"",
     "test": "node test.js && node color.js",
     "cover": "npx c8 npm test"
   },
